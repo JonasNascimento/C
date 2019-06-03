@@ -44,8 +44,7 @@ bool lerArquivoTXT_Array(char* path,int* array,int n){
 	file=fopen(path,"r");
 	
 	if(file==NULL){
-		printf("Erro\n");
-		system("pause");
+		printf("Arquivo nao pode ser aberto! \n");
 		return false;
 	}
 
@@ -120,11 +119,10 @@ bool escreverArqTXT_Enc(char * path,listaDupEnc*l){
 	
 	if(arq==NULL){
 		printf("Arquivo em  %s nao pode ser aberto!\n",path);
-		//system("pause");
 		return false;
 	}
 	
-	int i;
+	
 	printf("\nEscrevendo os valores no txt.");
 	no* aux = l->inicio;
 	while(aux!=NULL){

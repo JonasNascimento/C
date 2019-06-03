@@ -14,14 +14,13 @@ algorítmo de Ordenação Insertion Sort em diferentes Estruturas.**/
 
 #include "listaDupEnc.c"
 #include "IOFuncoes.c"
-#include "InsertionSort.h"
+#include "InsertionSort.c"
 
 #define max 3000000
 
 void printArray(int *array,int n);
 
 int main(){
-    
     int* array=(int*)malloc(max * sizeof(int));
 
     char DesordenadoArray[] = "txt/DesordenadoArray.txt"; //Caminho em que será gravado o Array desordenado
@@ -50,7 +49,9 @@ int main(){
 
     escreverArqTXT_Array(OrdenadoArray, array, max); //Escreve o vetor em um arquivo de texto
 
-    printf("\nTempo de Ordenacao de %d valores: %lf",max,TempoOrd); 
+    printf("\nTempo de Ordenacao de %d valores: %lf ms\n",max,TempoOrd); 
+
+    system("pause");
 
     return 0;
 }

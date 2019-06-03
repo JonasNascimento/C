@@ -13,7 +13,7 @@ algorítmo de Ordenação Insertion Sort em diferentes Estruturas.**/
 
 #include "listaDupEnc.c"
 #include "IOFuncoes.c"
-#include "InsertionSort.h"
+#include "InsertionSort.c"
 
 #define max 3000000
 
@@ -47,6 +47,8 @@ int main(){
 
     printf("Tempo de Ordenacao de %d valores: %lf ms.\n",max,TempoOrd);
 
+    system("pause");
     return 0;
+    
 }
 
